@@ -11,7 +11,7 @@ char **dividir_linha(char *linha){
 
     if (!tokens){
         fprintf(stderr, "Erro de alocação em dividir_linha\n");
-        exite(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
     }
     token = strtok(linha, TOK_DELIM);
     while(token != NULL){

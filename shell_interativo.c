@@ -8,8 +8,8 @@ void shell_interativo(void){
     do {
         printf("simple_prompt$ ");
         linha = ler_linha();
-        args = dividir_linha();
-        status = executar_args();
+        args = dividir_linha(linha);
+        status = executar_args(args);
 
         free(linha);
         free(args);

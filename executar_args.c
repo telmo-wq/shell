@@ -1,6 +1,7 @@
 #include "shell.h"
 #include <string.h>
 
+
 int executar_args(char **args){
     char *lista_builtin[] = {
         "cd",
@@ -20,7 +21,7 @@ int executar_args(char **args){
         return -1;
     }
     for (; i < sizeof(lista_builtin) / sizeof(char *); i++){
-        if (strcmp(args[0], *lista_builtin[i]) == 0){
+        if (strcmp(args[0], lista_builtin[i]) == 0){
             return ((*builtin_func[i])(args));
         }
     }

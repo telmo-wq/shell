@@ -1,7 +1,7 @@
 #include "shell.h"
 
 
-char **ler_linha(char *linha){
+char *ler_linha(void){
     char *linha = NULL;
     size_t buff = 0;
 
