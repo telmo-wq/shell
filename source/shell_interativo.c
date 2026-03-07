@@ -9,12 +9,8 @@ void shell_interativo(int argc, char *argv[]){
         printf("pluto$ ");
         linha = ler_linha();
         args = dividir_linha(linha);
-        if (argc > 1){
-            status = batch(argv[1]);
-        }else if (argc == 1){
-            status = executar_args(args);
-        }
-
+        status = executar_args(args);
+        
         free(linha);
         free(args);
 

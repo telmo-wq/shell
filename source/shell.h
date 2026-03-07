@@ -19,7 +19,7 @@ int novo_processo(char **args);
 
 char *ler_fluxo(void);
 
-int batch(char *argv);
+void batch(char *argv);
 
 int own_cd(char **args);
 int own_exit(char **args);
