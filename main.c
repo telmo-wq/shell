@@ -2,9 +2,13 @@
 #include <unistd.h>
 
 
-int main(void){
+int main(int argc, char *argv[]){
+    if (argc > 1){
+        batch(argv[1]);
+    }
+
     if (isatty(STDIN_FILENO) == 1){
-        shell_interativo();
+        shell_interativo(argc, argv);
     }else{
         shell_nao_interativo();
     }

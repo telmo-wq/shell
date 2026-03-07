@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-void shell_interativo(void);
+void shell_interativo(int argc, char *argv[]);
 void shell_nao_interativo(void);
 
 char *ler_linha(void);
@@ -18,6 +18,8 @@ int executar_args(char **args);
 int novo_processo(char **args);
 
 char *ler_fluxo(void);
+
+int batch(char *argv);
 
 int own_cd(char **args);
 int own_exit(char **args);

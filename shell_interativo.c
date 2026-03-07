@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void shell_interativo(void){
+void shell_interativo(int argc, char *argv[]){
     char *linha;
     char **args;
     int status = -1;
@@ -9,7 +9,11 @@ void shell_interativo(void){
         printf("pluto$ ");
         linha = ler_linha();
         args = dividir_linha(linha);
-        status = executar_args(args);
+        if (argc > 1){
+            status = batch(argv[1]);
+        }else if (argc == 1){
+            status = executar_args(args);
+        }
 
         free(linha);
         free(args);
