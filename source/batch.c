@@ -6,6 +6,11 @@ void batch(char *argv){
     arquivo = fopen(argv, "r");
     char comando[100];
 
+    if (arquivo == NULL){
+        printf("Arquivo não encontrado\n");
+        exit(1);
+    }
+
     while (fgets(comando, 100, arquivo) != NULL){
         comando[strcspn(comando, "\n")] = '\0';
         printf("%s\n", comando);
@@ -38,6 +43,7 @@ void batch(char *argv){
                 getcwd(diretorio_destino, sizeof(diretorio_destino));
                 printf("%s\n", diretorio_destino);
             }
+            
         }else {
             pid_t pid;
 

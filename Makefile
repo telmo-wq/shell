@@ -1,5 +1,5 @@
-output: batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o
-	gcc batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o -o output
+shell: batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o
+	gcc batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o -o shell
 
 main.o: source/main.c 
 	gcc -c source/main.c 
@@ -41,5 +41,5 @@ novo_processo.o: source/novo_processo.c source/shell.h
 	gcc -c source/novo_processo.c
 
 clean:
-	rm *.o output 
+	rm *.o shell
 	

@@ -1,1 +1,1 @@
-echo "Segundo teste"
+exit

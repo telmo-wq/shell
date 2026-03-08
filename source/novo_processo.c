@@ -13,7 +13,7 @@ int novo_processo(char **args){
     if (pid == 0){
         //processo filho
         if(execvp(args[0], args) == -1){
-            perror("Erro no novo processo: processo_filho");
+            perror("Erro no novo processo: comando não existente\n");
         }
         exit(EXIT_FAILURE);
     }

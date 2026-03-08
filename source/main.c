@@ -10,7 +10,6 @@ int main(int argc, char *argv[]){
         }
 
         batch(argv[1]);
-        return 0;
     }
 
     if (isatty(STDIN_FILENO) == 1){
