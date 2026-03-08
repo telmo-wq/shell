@@ -21,7 +21,7 @@ void batch(char *argv){
     while(fgets(comando, 100, arquivo) !=NULL){
         comando[strcspn(comando, "\n")] = '\0';
         if (strcmp(comando, "exit") == 0){
-            break;
+            exit(1);
         }
         char *arg[100];
 
